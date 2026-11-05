@@ -381,7 +381,7 @@
             </VisualStateGroupList>
         </Setter>
     </Style>
-  
+
     <!--
     <Style TargetType="TitleBar">
         <Setter Property="MinimumHeightRequest" Value="32"/>
@@ -436,5 +436,135 @@
         <Setter Property="UnselectedTabColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray950}}" />
         <Setter Property="SelectedTabColor" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray200}}" />
     </Style>
+
+    <!-- Custom Application Styles -->
+
+    <!-- Titles -->
+    <Style TargetType="Label" x:Key="CenteredTitleLabel">
+        <Setter Property="FontSize" Value="25" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#202B3C" />
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+    </Style>
+
+    <Style TargetType="Label" x:Key="AppLabel">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="TextColor" Value="#374151" />
+    </Style>
+
+    <!-- Buttons -->
+    <Style TargetType="Button" x:Key="AppButton">
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="BackgroundColor" Value="#365F91" />
+        <Setter Property="CornerRadius" Value="10" />
+        <Setter Property="Padding" Value="16,12" />
+        <Setter Property="MinimumHeightRequest" Value="48" />
+    </Style>
+
+    <!-- Input Fields -->
+    <Style TargetType="Entry" x:Key="AppEntry">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="TextColor" Value="#202124" />
+        <Setter Property="PlaceholderColor" Value="#9CA3AF" />
+        <Setter Property="BackgroundColor" Value="#F3F5F8" />
+        <Setter Property="HeightRequest" Value="48" />
+    </Style>
+
+    <Style TargetType="Entry" x:Key="MuscleEntry"
+           BasedOn="{StaticResource AppEntry}">
+        <Setter Property="BackgroundColor" Value="#F3F5F8" />
+        <Setter Property="TextColor" Value="#202124" />
+    </Style>
+
+    <!-- Error Messages -->
+    <Style TargetType="Label" x:Key="ErrorLabel">
+        <Setter Property="TextColor" Value="#D64545" />
+        <Setter Property="FontSize" Value="12" />
+    </Style>
+
+    <!-- Links -->
+    <Style TargetType="Label" x:Key="LinkLabel">
+        <Setter Property="TextColor" Value="#365F91" />
+        <Setter Property="TextDecorations" Value="Underline" />
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="HorizontalOptions" Value="Start" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+    </Style>
+
+    <!-- Borders -->
+    <Style TargetType="Border" x:Key="CardBorder">
+        <Setter Property="BackgroundColor" Value="White" />
+        <Setter Property="Stroke" Value="#E1E5EB" />
+        <Setter Property="StrokeThickness" Value="1" />
+        <Setter Property="Padding" Value="12" />
+    </Style>
+
+    <Style TargetType="Border" x:Key="MuscleItemBorder">
+        <Setter Property="BackgroundColor" Value="White" />
+        <Setter Property="Stroke" Value="#E1E5EB" />
+        <Setter Property="StrokeThickness" Value="1" />
+        <Setter Property="Padding" Value="10" />
+    </Style>
+
+
+    <!-- Muscle List Styles -->
+
+    <Style TargetType="Label" x:Key="TitleLabel">
+        <Setter Property="FontSize" Value="26" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#202B3C" />
+    </Style>
+
+    <Style TargetType="Label" x:Key="SubtitleLabel">
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="TextColor" Value="#7B8491" />
+    </Style>
+
+    <Style TargetType="Label" x:Key="SectionTitleLabel">
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#202B3C" />
+    </Style>
+
+    <Style TargetType="Label" x:Key="MuscleTitleLabel">
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#303B4A" />
+    </Style>
+
+    <Style TargetType="Label" x:Key="MuscleBodyLabel">
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="#4B5563" />
+    </Style>
+
+    <Style TargetType="Label" x:Key="SmallLabel">
+        <Setter Property="FontSize" Value="11" />
+        <Setter Property="TextColor" Value="#8A929E" />
+    </Style>
+
+    <!-- Muscle List Buttons -->
+
+    <Style TargetType="Button" x:Key="DarkButton"
+           BasedOn="{StaticResource AppButton}">
+        <Setter Property="BackgroundColor" Value="#365F91" />
+        <Setter Property="TextColor" Value="White" />
+    </Style>
+
+    <Style TargetType="Button" x:Key="DeleteButton"
+           BasedOn="{StaticResource AppButton}">
+        <Setter Property="BackgroundColor" Value="#FCEAEA" />
+        <Setter Property="TextColor" Value="#C43D3D" />
+    </Style>
+
+    <Style TargetType="Button" x:Key="ClearButton"
+           BasedOn="{StaticResource AppButton}">
+        <Setter Property="BackgroundColor" Value="#EDF0F4" />
+        <Setter Property="TextColor" Value="#465365" />
+    </Style>
+
 
 </ResourceDictionary>

@@ -8,56 +8,57 @@
         <VerticalStackLayout Padding="20" Spacing="10">
 
             <Label Text="Welcome To MuscleUp! Create an account"
-                   FontSize="28"
-                   FontAttributes="Bold"
-                   HorizontalOptions="Center"
+                   Style="{StaticResource CenteredTitleLabel}"
                    Margin="0,20,0,20" />
 
             <Label Text="Enter your new username:" />
 
             <Entry Placeholder="Username"
+                   Style="{StaticResource AppEntry}"
                    Text="{Binding UserName, Mode=TwoWay}" />
 
             <Label Text="{Binding UserNameError}"
-                   TextColor="Red" />
+                   Style="{StaticResource ErrorLabel}" />
 
             <Label Text="Enter your email:" />
 
             <Entry Placeholder="Email"
+                   Style="{StaticResource AppEntry}"
                    Keyboard="Email"
                    Text="{Binding Email, Mode=TwoWay}" />
 
             <Label Text="{Binding EmailError}"
-                   TextColor="Red" />
+                   Style="{StaticResource ErrorLabel}" />
 
             <Label Text="Enter your new password:" />
 
             <Entry Placeholder="Password"
+                   Style="{StaticResource AppEntry}"
                    IsPassword="True"
                    Text="{Binding Password, Mode=TwoWay}" />
 
             <Label Text="{Binding PasswordError}"
-                   TextColor="Red" />
+                   Style="{StaticResource ErrorLabel}" />
 
             <Label Text="Confirm password:" />
 
             <Entry Placeholder="Confirm Password"
+                   Style="{StaticResource AppEntry}"
                    IsPassword="True"
                    Text="{Binding ConfirmPassword, Mode=TwoWay}" />
 
             <Label Text="{Binding ConfirmPasswordError}"
-                   TextColor="Red" />
+                   Style="{StaticResource ErrorLabel}" />
 
             <Label Text="Enter your birthday:" />
 
             <DatePicker Date="{Binding DateOfBirth, Mode=TwoWay}" />
 
             <Label Text="{Binding DateOfBirthError}"
-                   TextColor="Red" />
+                   Style="{StaticResource ErrorLabel}" />
 
             <Label Text="Already have an account? Log In"
-                   TextColor="Blue"
-                   HorizontalOptions="Center">
+                   Style="{StaticResource LinkLabel}">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer
                         Command="{Binding LoginCommand}" />
@@ -65,6 +66,7 @@
             </Label>
 
             <Button Text="Register"
+                    Style="{StaticResource AppButton}"
                     Command="{Binding RegisterCommand}" />
 
         </VerticalStackLayout>
