@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MVVM.Views.LogIn"
              Title="LogIn">
+
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="10">
 
@@ -13,25 +14,33 @@
                    Margin="0,20,0,20" />
 
             <Label Text="Enter your Email:" />
-            <Entry x:Name="Email" Placeholder="Email" />
-            <Label x:Name="errEmail" TextColor="Red"/>
+
+            <Entry Placeholder="Email"
+                   Text="{Binding Email, Mode=TwoWay}" />
+
+            <Label Text="{Binding EmailError}"
+                   TextColor="Red" />
 
             <Label Text="Enter your password:" />
-            <Entry x:Name="PassWord"
-               Placeholder="Password"
-               IsPassword="True" />
-            <Label x:Name="errPassword" TextColor="Red"/>
+
+            <Entry Placeholder="Password"
+                   IsPassword="True"
+                   Text="{Binding Password, Mode=TwoWay}" />
+
+            <Label Text="{Binding PasswordError}"
+                   TextColor="Red" />
 
             <Label Text="Don't have an account? Register"
-                TextColor="Blue"
-                HorizontalOptions="Center">
+                   TextColor="Blue"
+                   HorizontalOptions="Center">
                 <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnRegisterClicked" />
+                    <TapGestureRecognizer
+                        Command="{Binding RegisterCommand}" />
                 </Label.GestureRecognizers>
             </Label>
 
-            <Button Text="Sign In" 
-                    Clicked="OnSignInClicked"/>
+            <Button Text="Sign In"
+                    Command="{Binding SignInCommand}" />
 
         </VerticalStackLayout>
     </ScrollView>
